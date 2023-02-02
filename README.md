@@ -1,2 +1,3 @@
 # k8s-guides
-Kubernetes guides
+
+Simplified and practical kubernetes guides extracted from real use cases.
