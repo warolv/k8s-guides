@@ -1,9 +1,10 @@
 ![k8s-api-curl](images/k8s-api-curl-thumb.png)
 
-## Playing with k8s API using cURL
+https://youtu.be/oiD80Sxzi4s
+
+## Create Pod on Kubernetes using k8s API and cURL
 
 ### Prerequisites: existing k8s cluster, using 'EKS' in my case:
-
 
 ### Create serviceAccount: 'play-with-k8s-api'
 
