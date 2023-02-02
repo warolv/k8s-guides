@@ -1,4 +1,4 @@
-## Playing with k8s API
+## Playing with k8s API using cURL
 
 ### Prerequisites: existing k8s cluster, using 'EKS' in my case:
 
@@ -36,7 +36,7 @@ kubectl create clusterrolebinding play-with-k8s-api --clusterrole=cluster-admin 
 ### Get Token
 
 ```bash
-TOKEN=$(kubectl get secret play-with-k8s-api-secret -o jsonpath='{.data.token}' | base64 -D )
+TOKEN=$(kubectl get secret play-with-k8s-api-secret -o jsonpath='{.data.token}' | base64 -D)
 
 APISERVER=$(kubectl config view --minify -o jsonpath='{.clusters[0].cluster.server}')
 ```
