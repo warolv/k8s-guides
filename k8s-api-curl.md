@@ -1,3 +1,5 @@
+![k8s-api-curl](images/k8s-api-curl-thumb.png)
+
 ## Playing with k8s API using cURL
 
 ### Prerequisites: existing k8s cluster, using 'EKS' in my case:
