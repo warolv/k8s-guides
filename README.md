@@ -3,7 +3,7 @@
 Simplified and practical kubernetes guides extracted from real use cases.
 
 ## Playing with k8s API using cURL
-![k8s-api-curl](images/k8s-api-curl.png)
+![k8s-api-curl](images/k8s-api-curl-thumb.png)
 
 [Playing with k8s API using cURL](k8s-api-curl.md)
 
