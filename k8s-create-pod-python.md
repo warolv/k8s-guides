@@ -162,3 +162,5 @@ python pod_handler create
 pip install kubernetes
 python pod_handler delete
 ```
+
+You can find code of pod_handler.py in k8s-create-pod-python folder.
