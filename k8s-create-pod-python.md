@@ -66,6 +66,7 @@ export APISERVER=$(kubectl config view --minify -o jsonpath='{.clusters[0].clust
 ```python
 from kubernetes import client, config
 import os
+import argparse
 
 k8s_endpoint = os.getenv('APISERVER')
 bearer_token = os.getenv('TOKEN')
@@ -80,8 +81,8 @@ def init_client(k8s_endpoint, bearer_token):
     
     return v1
 
-# # Use kube_config for authentication instead of bearer token
 # def init_client():
+#     # Configs can be set in Configuration class directly or using helper utility
 #     config.load_kube_config()
 #     v1 = client.CoreV1Api()
     
@@ -123,29 +124,41 @@ def delete_pod(v1):
     print(resp)
         
 
-v1 = init_client(k8s_endpoint, bearer_token)
-# list_pods(v1)
-# create_pod(v1)
-delete_pod(v1)
+def main():
+    v1 = init_client(k8s_endpoint, bearer_token)
+    parser = argparse.ArgumentParser()
+     
+    parser.add_argument("options", help="Pick an option: list | create | delete")
+    args = parser.parse_args()
+    if args.options == 'list':
+        list_pods(v1)
+    elif args.options == 'create':
+        create_pod(v1)
+    elif args.options == 'delete':
+        delete_pod(v1)
+    else:
+        print('You need to pick one of the options: list | create | delete')
+if __name__ == '__main__':
+    main()
 ```
 
 ### List pods
 
 ```bash
 pip install kubernetes
-python pod_handler list
+python pod_handler.py list
 ```
 
 ### Create busybox pod
 
 ```bash
 pip install kubernetes
-python pod_handler list
+python pod_handler create
 ```
 
 ### Delete busybox pod
 
 ```bash
 pip install kubernetes
-python pod_handler list
+python pod_handler delete
 ```

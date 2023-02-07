@@ -1,5 +1,6 @@
 from kubernetes import client, config
 import os
+import argparse
 
 k8s_endpoint = os.getenv('APISERVER')
 bearer_token = os.getenv('TOKEN')
@@ -57,7 +58,19 @@ def delete_pod(v1):
     print(resp)
         
 
-v1 = init_client(k8s_endpoint, bearer_token)
-# list_pods(v1)
-# create_pod(v1)
-delete_pod(v1)
+def main():
+    v1 = init_client(k8s_endpoint, bearer_token)
+    parser = argparse.ArgumentParser()
+     
+    parser.add_argument("options", help="Pick an option: list | create | delete")
+    args = parser.parse_args()
+    if args.options == 'list':
+        list_pods(v1)
+    elif args.options == 'create':
+        create_pod(v1)
+    elif args.options == 'delete':
+        delete_pod(v1)
+    else:
+        print('You need to pick one of the options: list | create | delete')
+if __name__ == '__main__':
+    main()
