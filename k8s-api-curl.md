@@ -1,4 +1,4 @@
-![k8s-api-curl](images/k8s-api-curl-thumb.png)
+![k8s-api-curl](images/k8s-api-curl-tb.png)
 
 https://youtu.be/oiD80Sxzi4s
 
