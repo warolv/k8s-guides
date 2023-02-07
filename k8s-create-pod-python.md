@@ -1,4 +1,4 @@
-![k8s-create-pod-python](images/k8s-create-pod-python.png)
+![k8s-create-pod-python](images/k8s-create-pod-python-thumb.png)
 
 ## Create Pod on Kubernetes using python
 

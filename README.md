@@ -16,4 +16,4 @@ https://gist.github.com/warolv/51802de1af07fc881adafb1b99471bae
 
 [Create Pod on Kubernetes using python](k8s-create-pod-python.md)
 
-<img src="images/k8s-create-pod-python.png" width="300" height="200">
+<img src="images/k8s-create-pod-python-thumb.png" width="300" height="200">
