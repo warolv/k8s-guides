@@ -1,5 +1,7 @@
 ![k8s-create-pod-python](images/k8s-create-pod-python-tb.png)
 
+https://youtu.be/tLKUH3HP0Lg
+
 ## Create Pod on Kubernetes using python
 
 ### Prerequisites: existing k8s cluster, using 'kind' in my case:
