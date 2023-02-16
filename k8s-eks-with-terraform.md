@@ -25,7 +25,7 @@ https://github.com/terraform-aws-modules/terraform-aws-vpc
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
 
-  name                 = "k8s-${var.cluster_name}-vpc"
+  name                 = "k8s-guides-vpc"
   cidr                 = "172.16.0.0/16"
   azs                  = data.aws_availability_zones.available.names
   private_subnets      = ["172.16.1.0/24", "172.16.2.0/24"]
@@ -41,6 +41,10 @@ module "vpc" {
 }
 ```
 
+Create VPC with 2 private and 2 public subnets
+Use Single NAT gateway (Great for dev | staging enironments, not for production)
+
+
 ### Overview of 'terraform-aws-eks' module
 
 https://github.com/terraform-aws-modules/terraform-aws-eks
@@ -52,30 +56,24 @@ module "eks" {
 
   cluster_name    = "k8s-guides-eks"
   cluster_version = "1.24"
-  subnets         = module.vpc.private_subnets
+  subnet_ids      = module.vpc.private_subnets
 
   vpc_id = module.vpc.vpc_id
-  write_kubeconfig   = true
 
-  worker_groups = [
-    {
-        name = "ng-medium"
-        instance_type = "t3.medium"
-        asg_desired_capacity = 1
-        tags = [{
-          key                 = "instance-type"
-          value               = "on-demand-medium"
-          propagate_at_launch = true
-        }, {
-          key                 = "os-type"
-          value               = "linux"
-          propagate_at_launch = true
-        }]
-    },
-  ]
+  eks_managed_node_groups = {
+    first = {
+      desired_capacity = 1
+      max_capacity     = 5
+      min_capacity     = 1
+
+      instance_type = "t3.medium"
+    }
+  }
 }
 ```
 
+EKS Cluster version is 1.24
+Create Node Group (AWS autoscaling group) of 1 instance, instance_type: t3.medium
 
 ### Create EKS with Terraform
 

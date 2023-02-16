@@ -19,3 +19,10 @@ https://gist.github.com/warolv/51802de1af07fc881adafb1b99471bae
 <img src="images/k8s-create-pod-python-tb.png" width="300" height="200">
 
 https://youtu.be/tLKUH3HP0Lg
+
+## Provision EKS cluster with terraform
+
+[Provision EKS cluster with terraform](k8s-eks-with-terraform.md)
+
+<img src="images/k8s-eks-with-terraform-tb.png" width="300" height="200">
+
