@@ -24,5 +24,5 @@ https://youtu.be/tLKUH3HP0Lg
 
 [Provision EKS cluster with terraform](k8s-eks-with-terraform.md)
 
-<img src="images/k8s-eks-with-terraform-tb.png" width="300" height="200">
+<img src="images/k8s-eks-tf-tb.png" width="300" height="200">
 

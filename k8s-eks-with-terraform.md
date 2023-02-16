@@ -1,4 +1,4 @@
-![k8s-eks-with-terraform](images/k8s-eks-with-terraform.png)
+![k8s-eks-with-terraform](images/k8s-eks-tf-tb.png)
 
 ## How to provision EKS cluster with terraform
 
