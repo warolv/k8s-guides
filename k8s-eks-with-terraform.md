@@ -78,6 +78,9 @@ Create Node Group (AWS autoscaling group) of 1 instance, instance_type: t3.mediu
 ### Create EKS with Terraform
 
 ```bash
+# git clone git@github.com:warolv/k8s-guides.git
+# cd k8s-eks-with-terraform
+
 terraform init
 
 terraform plan
