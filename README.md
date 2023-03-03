@@ -1,28 +1,20 @@
-# k8s-guides
+# Kubernetes Guides
 
-Simplified and practical kubernetes guides extracted from real use cases.
+![self-hosted-runner](images/k8s-guides.png)
 
-## Create Pod on Kubernetes using k8s API and cURL
+Practical and simpified kubernetes guides extracted from different use cases I encountered during my day job.
 
-[Create Pod on Kubernetes using k8s API and cURL](k8s-api-curl.md)
-
-<img src="images/k8s-api-curl-tb.png" width="300" height="200">
+## 1. [Create Pod on Kubernetes using k8s API and cURL](k8s-api-curl.md)
 
 https://youtu.be/oiD80Sxzi4s
 
 https://gist.github.com/warolv/51802de1af07fc881adafb1b99471bae
 
-## Create Pod on Kubernetes using python
 
-[Create Pod on Kubernetes using python](k8s-create-pod-python.md)
-
-<img src="images/k8s-create-pod-python-tb.png" width="300" height="200">
+## 2. [Create Pod on Kubernetes using python](k8s-create-pod-python.md)
 
 https://youtu.be/tLKUH3HP0Lg
 
-## Provision EKS cluster with terraform
 
-[Provision EKS cluster with terraform](k8s-eks-with-terraform.md)
-
-<img src="images/k8s-eks-tf-tb.png" width="300" height="200">
+## 3. [Provision EKS cluster with terraform](k8s-eks-with-terraform.md)
 
